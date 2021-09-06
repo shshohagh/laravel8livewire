@@ -18,7 +18,7 @@ class Uploads extends Component
             'filename' => 'required'
         ]);
 
-        $filename = $this->filename->store('files','public');
+        $filename = $this->filename->store('files','public'); // storage/app/public/files/
         $validateData['filename'] = $filename;
         Upload::create($validateData);
         session()->flash('message','Upload Successfully');
