@@ -24,13 +24,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/post',Post::class);
-Route::get('/user',User::class);
-Route::get('/home/{name?}',Home::class);
-Route::get('/form',Form::class);
-Route::get('/students',Students::class);
-Route::get('/uploads',Uploads::class);
-Route::get('/upload-images',Images::class);
+Route::get('/post',Post::class)->name('post');
+Route::get('/user',User::class)->name('houserme');
+Route::get('/home/{name?}',Home::class)->name('home');
+Route::get('/form',Form::class)->name('form');
+Route::get('/students',Students::class)->name('students');
+Route::get('/uploads',Uploads::class)->name('uploads');
+Route::get('/upload-images',Images::class)->name('upload-images');
 
 
 

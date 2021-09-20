@@ -24,6 +24,15 @@
     <body class="antialiased">
         @livewire('post')
         @livewire('user')
+
+        @if (Route::has('home'))<a href="{{ route('home') }}" target="_blank" rel="noopener noreferrer">Home</a>@endif
+        @if (Route::has('user'))<a href="{{ route('user') }}" target="_blank" rel="noopener noreferrer">Users</a>@endif
+        @if (Route::has('post'))<a href="{{ route('post') }}" target="_blank" rel="noopener noreferrer">post</a>@endif
+        @if (Route::has('form'))<a href="{{ route('form') }}" target="_blank" rel="noopener noreferrer">form</a>@endif
+        @if (Route::has('students'))<a href="{{ route('students') }}" target="_blank" rel="noopener noreferrer">Students CRUD</a>@endif
+        @if (Route::has('uploads'))<a href="{{ route('uploads') }}" target="_blank" rel="noopener noreferrer">Upload File</a>@endif
+        @if (Route::has('upload-images'))<a href="{{ route('upload-images') }}" target="_blank" rel="noopener noreferrer">Upload Files</a>@endif
+
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
